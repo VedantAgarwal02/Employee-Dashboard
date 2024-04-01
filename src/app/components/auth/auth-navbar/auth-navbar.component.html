@@ -1,0 +1,13 @@
+<div class="parent-container">
+  <div class="back-container" (click)="redirectToLogin()">
+    <div *ngIf="!isLogin" class="inner-container" >
+      <img
+        [src]="imageData.backArrow"
+        alt="Back to Login"
+        class="back-arrow"
+      />
+    </div>
+  </div>
+  <h2 class="heading">Kavitech</h2>
+  <div class="emptyDiv"></div>
+</div>

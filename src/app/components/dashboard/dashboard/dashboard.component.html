@@ -1,0 +1,25 @@
+<div class="parent-container">
+  <div class="container">
+    <div class="profile-pic-container">
+      <ng-template [ngIf]="user.profilePicture">
+        <img
+          [src]="user.profilePicture"
+          draggable="false"
+          class="profile-pic"
+          alt="abc"
+        />
+      </ng-template>
+      <ng-template [ngIf]="!user.profilePicture">
+        <img
+          src="../../../../assets/pictures/dummy-profile-pic.png"
+          draggable="false"
+          class="profile-pic"
+          alt="abc"
+        />
+      </ng-template>
+    </div>
+    <div class="heading">
+      <p>Welcome, {{ name }}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,144 @@
+.parent-container {
+  background-color: var(--primary-header);
+  margin: auto;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: var(--font-aleo);
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 21;
+}
+
+.offcanvas-container {
+  transition: all 0.4s ease-in-out;
+}
+
+.custom-offcanvas.active {
+  transform: translateX(0);
+}
+
+.custom-offcanvas {
+  position:absolute;
+  opacity: 1;
+  z-index: 21;
+  top: 0;
+  left: 0;
+  background-color: rgba(7, 1, 78, 0.2);
+  height: 100vh;
+  width: 15vw;
+  transform: translateX(-100%);
+  transition: all 0.3s ease-in;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+}
+
+.modal-body {
+  background-color: var(--primary-body-color);
+  font-family: var(--font-aleo);
+  color: var(--color-text);
+}
+
+.modal-footer {
+  color: var(--color-text);
+  background-color: var(--primary-body-color);
+  font-family: var(--font-aleo);
+}
+
+.offcanvas-icon-container {
+  display: flex;
+  justify-content: center;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transition: all 0.2s ease-in;
+}
+
+.offcanvas-icon-container:hover {
+  border-right: 1px solid white;
+}
+
+.offcanvas-icon {
+  width: 30px;
+  height: 30px;
+  margin: auto 10px;
+  cursor: pointer;
+  filter: invert(100%);
+  border-radius: 5px;
+}
+
+.offcanvas-icon:hover {
+  transform: rotate(180deg);
+  transition: all 0.5s ease-in-out;
+}
+
+.heading-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.heading {
+  font-weight: 900;
+  text-align: center;
+  cursor: pointer;
+  margin: auto;
+  color: var(--color-text);
+}
+
+.logout-btn {
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  color: var(--color-text);
+  transition: all 0.2s ease-in;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: rgb(185, 2, 2);
+}
+
+.logout-btn > p {
+  margin: auto 10px;
+}
+
+.logout-btn:hover {
+  background-color: rgb(146, 2, 2);
+}
+
+.logout-btn:active {
+  box-shadow: 0px 0px 1px 1px white;
+}
+
+@media only screen and (max-width: 575px) {
+  .logout-btn {
+    display: none;
+  }
+
+  .custom-offcanvas {
+    width: 90vw;
+  }
+}
+
+
+@media only screen and (max-width: 1400px) and (min-width:900px) {
+  .custom-offcanvas {
+    width:17vw;
+  }
+}
+
+@media only screen and (max-width: 900px) and (min-width:575px) {
+  .custom-offcanvas {
+    width:22vw;
+  }
+}

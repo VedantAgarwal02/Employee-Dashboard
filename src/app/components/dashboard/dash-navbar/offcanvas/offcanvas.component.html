@@ -1,0 +1,83 @@
+<div class="actual-offcanvas-content">
+  <div class="offcanvas-header">
+    <h4 class="offcanvas-title">Kavitech</h4>
+
+    <img
+      [src]="imageData.closeBlack"
+      class="close-btn"
+      (click)="closeOffcanvas()"
+      alt="*"
+    />
+  </div>
+
+  <div class="offcanvas-body">
+    <div class="body-list">
+      <h5>Access</h5>
+      <div class="list-item" routerLink="/app/role-management" (click)="closeOffcanvas()">
+        <div class="list-item-text-container">
+          <p class="list-item-text">Role Management</p>
+        </div>
+      </div>
+
+      <h5>Features</h5>
+      <!-- <div class="list-item" routerLink="/app" (click)="closeOffcanvas()">
+        <div class="list-item-icon-container">
+          <img
+            [src]="imageData.home"
+            class="list-item-icon"
+            alt="*"
+          />
+        </div>
+        <div class="list-item-text-container">
+          <p class="list-item-text">Home</p>
+        </div>
+      </div>
+      <div class="list-item" routerLink="/app/users" (click)="closeOffcanvas()">
+        <div class="list-item-icon-container">
+          <img
+            [src]="imageData.listIcon"
+            class="list-item-icon"
+            alt="*"
+          />
+        </div>
+        <div class="list-item-text-container">
+          <p class="list-item-text">List of User</p>
+        </div>
+      </div>
+      <div
+        class="list-item"
+        routerLink="/app/add-user"
+        (click)="closeOffcanvas()"
+      >
+        <div class="list-item-icon-container">
+          <img
+            [src]="imageData.addUserIcon"
+            class="list-item-icon"
+            alt="*"
+          />
+        </div>
+        <div class="list-item-text-container">
+          <p class="list-item-text">Add User</p>
+        </div>
+      </div> -->
+
+      <div *ngIf="visibleFeatures===0"> -Nothing to show- </div>
+
+      <div *ngFor="let feature of featuresData" (click)="featureClick(feature.title)" class="list-item">
+        <div *ngIf="activeFeatures.includes(feature._id)" class="list-item-text-container">
+          <p class="list-item-text"> {{feature.title}} </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="offcanvas-logout-btn-container">
+      <button
+        type="button"
+        class="offcanvas-logout-btn"
+        (click)="openLogoutModal.emit()"
+      >
+        Logout
+      </button>
+    </div>
+  </div>
+</div>

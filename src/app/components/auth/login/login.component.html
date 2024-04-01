@@ -1,0 +1,39 @@
+<div class="parent-container">
+  <div class="content-container">
+    <h4>Login</h4>
+
+    <span class="p-float-label form-field">
+      <input
+        pInputText
+        id="email"
+        type="email"
+        class="input-box"
+        [(ngModel)]="email"
+      />
+      <label for="email">E-mail</label>
+    </span>
+    <span class="p-float-label form-field">
+      <input
+        pInputText
+        id="password"
+        type="password"
+        class="input-box"
+        [(ngModel)]="password"
+      />
+      <label for="password">Password</label>
+    </span>
+
+    <div class="options-block">
+      <p class="forgot-password" (click)="redirectToForgotPass()">
+        Forgot Password? <br />
+      </p>
+      <p class="signup-redirect" (click)="redirectToSignup()">Signup <br /></p>
+    </div>
+
+    <div class="button">
+      <button type="submit" class="submit-button" (click)="handleSubmit()">
+        Submit
+      </button>
+    </div>
+  </div>
+</div>

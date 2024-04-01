@@ -1,0 +1,51 @@
+<div class="parent-container">
+  <div class="offcanvas-container">
+    <div class="custom-offcanvas" id="custom-offcanvas">
+      <app-offcanvas
+        (openLogoutModal)="openModal(logoutContent)"
+        (closeOffC)="closeOffcanvas()"
+      ></app-offcanvas>
+    </div>
+
+    <div
+      class="backdrop"
+      *ngIf="isOffcanvasOpen"
+      (click)="closeOffcanvas()"
+    ></div>
+  </div>
+
+  <ng-template #logoutContent let-logoutModal>
+    <div class="modal-body">
+      <p>Are you sure you want to logout?</p>
+    </div>
+    <div class="modal-footer">
+      <button
+        type="button"
+        class="btn btn-secondary"
+        (click)="logoutModal.dismiss()"
+      >
+        Cancel
+      </button>
+      <button type="button" class="btn btn-primary" (click)="logout()">
+        OK
+      </button>
+    </div>
+  </ng-template>
+
+  <div class="offcanvas-icon-container" (click)="openOffcanvas()">
+    <img
+      [src]="imageData.barsSolid"
+      alt="Menu"
+      class="offcanvas-icon"
+      id="offcanvas-icon"
+      draggable="false"
+    />
+  </div>
+
+  <div class="heading-container" (click)="redirectToHome()">
+    <h2 class="heading" (click)="redirectToHome()">Kavitech</h2>
+  </div>
+  <div class="logout-btn" (click)="openModal(logoutContent)">
+    <p>Logout</p>
+  </div>
+</div>

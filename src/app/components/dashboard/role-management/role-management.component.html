@@ -1,0 +1,39 @@
+<div class="parent-container">
+  <!-- <h4 class="heading" >Role Management</h4> -->
+  <table class="table">
+    <thead>
+      <th>Feature</th>
+      <th> {{emptyString}} </th>
+      <th>Show/Hide</th>
+    </thead>
+    <tbody>
+      <tr class="data-field" *ngFor="let feature of features">
+        <td>{{ feature.title }}</td>
+        <td>
+            <img [src]="imageData.show" alt="SHOW" class="eye-icon" *ngIf="activeFeatures.includes(feature._id)" (click)="toggleFeature(feature._id)" >
+            <img [src]="imageData.hide" alt="HIDE" class="eye-icon" *ngIf="!activeFeatures.includes(feature._id)" (click)="toggleFeature(feature._id)" >
+        </td>
+        <td>
+          <div class="form-check form-switch">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="flexSwitchCheckChecked"
+              [checked]="activeFeatures.includes(feature._id)"
+              (click)="toggleFeature(feature._id)"
+            />
+            <label class="form-check-label" for="flexSwitchCheckChecked">
+                {{emptyString}}
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3"> 
+            <button type="button" class="submit-btn" (click)="submit()">Save Changes</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

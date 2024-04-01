@@ -1,0 +1,67 @@
+<div class="parent-container">
+
+  <div class="container">
+    <h4>Signup</h4>
+    <div class="form-field">
+      <label for="formFile" class="form-label">Profile picture:</label>
+      <input
+        class="form-control"
+        type="file"
+        id="formFile"
+        accept=".jpg, .png, .jpeg"
+        (change)="fileSelected($event)"
+      />
+    </div>
+    <span class="p-float-label form-field">
+      <input pInputText id="name" class="input-box" [(ngModel)]="name" />
+      <label for="name">Name</label>
+    </span>
+    <span class="p-float-label form-field">
+      <input pInputText id="email" class="input-box" [(ngModel)]="email" />
+      <label for="email">E-mail</label>
+    </span>
+    <span class="p-float-label form-field">
+      <input
+        pInputText
+        type="password"
+        id="password"
+        class="input-box"
+        [(ngModel)]="password"
+      />
+      <label for="password">Password</label>
+    </span>
+
+    <div class="password-help-block">
+      <small class="check" #check1 [style]="displayNone">
+        <div class="error-icon-container">
+          <img
+            src="../../../../assets/pictures/error-icon.svg"
+            alt="error"
+            class="error-icon"
+          />
+        </div>
+        <p>Password should be atleast 8 characters.</p>
+      </small>
+      <small class="check" #check2 [style]="displayNone">
+        <div class="error-icon-container">
+          <img
+            src="../../../../assets/pictures/error-icon.svg"
+            alt="error"
+            class="error-icon"
+          />
+        </div>
+        <p>
+          Password should contain atleast 1 alphabet, 1 Special character and 1
+          number.
+        </p>
+      </small>
+    </div>
+    <br />
+
+    <div class="button">
+      <button type="submit" class="submit-button" (click)="handleSubmit()">
+        Submit
+      </button>
+    </div>
+  </div>
+</div>

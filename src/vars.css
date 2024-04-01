@@ -1,0 +1,17 @@
+:root {
+    /* --auth-bg-image:url('./assets/pictures/bgImage1.jpg') ; */
+    --bg-height:94vh;
+    --primary-header:rgb(5, 1, 88);
+    --primary-body-color:rgb(5, 1, 88);
+    --primary-body-color-faded:rgba(5, 1, 88, 0.2);
+    --font-aleo:"aleo", sans-serif;
+    --color-text:blanchedalmond;
+    --secondary-body-color:rgb(32, 46, 167);
+    --submit-btn-bg:rgb(5, 1, 110);
+    --submit-btn-padding:5px 12px;
+    --submit-btn-hover:rgb(4, 1, 130);
+    --submit-btn-active:rgb(40, 10, 180);
+
+    --dashboard-bg-image:url('./assets/pictures/homeBackground.webp');
+    --basic-box-shadow:0px 0px 2px 1px rgb(21, 18, 18);
+}

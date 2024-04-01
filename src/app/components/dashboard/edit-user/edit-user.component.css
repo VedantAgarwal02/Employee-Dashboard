@@ -1,0 +1,68 @@
+.modal-header {
+  background-color: var(--primary-header);
+  font-family: var(--font-aleo);
+  color: var(--color-text);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.close-btn {
+  filter: invert(100%);
+  cursor: pointer;
+  margin: 2px 10px;
+  height: 40px;
+  padding: 5px 10px;
+}
+
+.modal-body {
+  background-color: var(--primary-body-color);
+  color: var(--color-text);
+  font-family: var(--font-aleo);
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.profile-picture {
+  max-height: 200px;
+}
+
+.form-control {
+  font-family: sans-serif;
+}
+
+.submit-btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.submit-btn {
+  background-color: var(--submit-btn-bg);
+  padding: var(--submit-btn-padding);
+  border-radius: 4px;
+  border: none;
+  color: white;
+  width: 60%;
+  margin: auto;
+  transition: all 0.2s ease-in-out;
+}
+
+.submit-btn:hover {
+  background-color: var(--submit-btn-hover);
+}
+
+.submit-btn:active {
+  background-color: var(--submit-btn-active);
+  box-shadow: var(--basic-box-shadow);
+}
+
+@media only screen and (max-width: 400px) {
+  btn {
+    width: 100%;
+  }
+}

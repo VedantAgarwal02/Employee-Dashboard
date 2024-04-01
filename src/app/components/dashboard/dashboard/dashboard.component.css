@@ -1,0 +1,64 @@
+.parent-container {
+  height: var(--bg-height);
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.parent-container::before {
+  background-image: var(--dashboard-bg-image);
+  background-repeat: repeat;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: antiquewhite;
+  z-index: -1;
+  filter: brightness(0.73);
+}
+
+.container {
+  width: 60%;
+  margin: auto;
+  background-color: rgba(0, 11, 108, 0.1);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: var(--basic-box-shadow);
+  z-index: 1;
+}
+
+.profile-pic-container {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.heading {
+  font-weight: 700;
+  text-align: center;
+  padding: 10px;
+  width: 80%;
+  color: var(--color-text);
+  margin: auto;
+}
+
+
+@media only screen and (max-width:600px) {
+  .container {
+    width:80%;
+  }
+}
+
+@media screen and (max-height:550px) {
+  .parent-container {
+    height: 100%;
+    padding: 10px 0px ;
+  }
+}

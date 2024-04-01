@@ -1,0 +1,17 @@
+.alert-container{
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    transition: all 2s ease-in-out;
+    z-index: 10000;
+}
+
+.alert{
+    position: fixed;
+    top: 10px;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    opacity: 0.9;
+    font-family: var(--font-aleo);
+}

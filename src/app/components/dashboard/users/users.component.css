@@ -1,0 +1,177 @@
+.parent-container {
+  font-family: var(--font-aleo);
+  height: 100%;
+  position: relative;
+}
+
+.parent-container::before {
+  display: block;
+  background-image: var(--dashboard-bg-image);
+  background-repeat: no-repeat;
+  content:"";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--color-text);
+  z-index: -1;
+  filter: brightness(0.73);
+}
+
+.modal-header {
+  background-color: var(--primary-header);
+  font-family: var(--font-aleo);
+  color: var(--color-text);
+}
+
+.close-btn {
+  filter: invert(100%);
+  cursor: pointer;
+  margin: 2px 10px;
+  height: 40px;
+  padding: 5px 10px;
+}
+
+.modal-body {
+  background-color: var(--primary-body-color);
+  font-family: var(--font-aleo);
+  color: var(--color-text);
+}
+
+.modal-footer {
+  background-color: var(--primary-body-color);
+  font-family: var(--font-aleo);
+}
+
+.heading-container {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.heading {
+  font-weight: 600;
+  color: var(--color-text);
+  padding: 10px 5px;
+  margin: auto 0px;
+}
+
+.add-user-btn-container {
+  margin: auto 0px;
+}
+
+.add-user-btn {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--color-text);
+  background-color:var(--primary-body-color-faded);
+  box-shadow: 0px 0px 1px 1px white;
+}
+
+.add-user-btn:hover {
+  background-color: var(--primary-body-color);
+}
+
+.add-user-btn:active {
+  box-shadow: 0px 0px 1px 1px white;
+}
+
+.horizontal-rule {
+  color: yellow;
+  margin: 0px;
+}
+
+.content {
+  width: 70%;
+  margin: auto;
+  height: 630px;
+  overflow:scroll;
+  overflow-x: hidden;
+  color: var(--color-text);
+}
+
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  margin: 5px;
+  background-color: var(--primary-body-color-faded);
+  backdrop-filter: blur(5px);
+  color: var(--color-text);
+  box-shadow:var(--basic-box-shadow);
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+  background-color: rgba(5, 1, 88, 0.4);
+}
+
+.profile-pic-container {
+  display: flex;
+  width: auto;
+  justify-content: center;
+  padding: 5px 30px;
+}
+
+.profile-pic {
+  margin: auto;
+  width: 80px;
+  height: 90px;
+}
+
+.actions-container {
+  text-align: right;
+}
+
+.actions-icon {
+  cursor: pointer;
+  padding: 4px 8px;
+  filter: invert(100%);
+  border: 1px solid transparent;
+}
+
+.actions-icon:active {
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.footer-txt {
+  color: rgb(88, 88, 88);
+  font-weight: 600;
+  text-align: center;
+  font-size: small;
+  padding-bottom: 80px;
+  color: white;
+}
+
+@media only screen and (max-width: 575px) {
+  .heading-container {
+    padding-bottom: 0px;
+  }
+  .heading {
+    margin: auto;
+    padding: 5px 3px;
+    padding-top: 15px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 25px;
+  }
+  .card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile-pic {
+    width: 100px;
+    height: 120px;
+  }
+  .add-user-btn {
+    display: none;
+  }
+}

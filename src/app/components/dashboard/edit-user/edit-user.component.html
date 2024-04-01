@@ -1,0 +1,59 @@
+<div class="modal-header">
+  <h4 class="modal-title">Edit User</h4>
+  <img
+    src="../../../../assets/pictures/close-black.svg"
+    class="close-btn"
+    (click)="handleClose()"
+    alt="*"
+  />
+</div>
+<div class="modal-body">
+  <form>
+    <div class="image-container mb-3" *ngIf="image" >
+      <img [src]="image" alt="picture" class="profile-picture" />
+    </div>
+
+    <div class="image-container mb-3" *ngIf="!image">
+      <p class="b">-No Picture-</p>
+    </div>
+    <div class="mb-3">
+      <label for="profilePic" class="form-label">Profile Picture</label>
+      <input
+        type="file"
+        class="form-control"
+        id="profilePic"
+        accept=".jpg, .png, .jpeg"
+        (change)="pictureInput($event)"
+        [(ngModel)]="image"
+        [ngModelOptions]="{ standalone: true }"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        title="name"
+        [(ngModel)]="name"
+        [ngModelOptions]="{ standalone: true }"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        title="email"
+        [placeholder]="user.email"
+        [(ngModel)]="email"
+        [ngModelOptions]="{ standalone: true }"
+      />
+    </div>
+
+    <div class="submit-btn-container">
+      <button type="submit" class="submit-btn" (click)="handleSubmit()">
+        Save
+      </button>
+    </div>
+  </form>
+</div>

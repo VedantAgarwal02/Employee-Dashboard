@@ -1,0 +1,16 @@
+{
+    "home":"../../../../../assets/pictures/home.svg",
+    "closeBlack":"../../../../../assets/pictures/close-black.svg",
+    "listIcon":"../../../../../assets/pictures/list.svg",
+    "addUserIcon":"../../../../../assets/pictures/add-user.svg",
+    "backArrow":"../../../../assets/pictures/backArrow.png",
+    "barsSolid":"../../../../assets/pictures/bars-solid.svg",
+    "plus":"../../../../assets/pictures/plus.svg",
+    "excelFile":"../../../../assets/pictures/excel-file.svg",
+    "dummyProfilePic":"../../../../assets/pictures/dummy-profile-pic.png",
+    "pencil":"../../../../assets/pictures/pencil.svg",
+    "trash":"../../../../assets/pictures/trash.svg",
+    "roleManage":"../../../../assets/pictures/role-manage.svg",
+    "show":"../../../../assets/pictures/show.svg",
+    "hide":"../../../../assets/pictures/hide.svg"
+}

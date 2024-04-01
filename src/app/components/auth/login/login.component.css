@@ -1,0 +1,124 @@
+.parent-container {
+  height: var(--bg-height);
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.parent-container::before {
+  background-image: var(--dashboard-bg-image);
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: antiquewhite;
+  z-index: -1;
+  filter: brightness(0.73);
+}
+
+.content-container {
+  margin: auto;
+  width: 400px;
+  padding: 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  background-color: var(--primary-body-color-faded);
+  box-shadow: var(--basic-box-shadow);
+}
+
+.content-container > h4 {
+  font-family: var(--font-aleo);
+  color: var(--color-text);
+  text-align: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  margin: 0px;
+}
+
+.form-field {
+  margin-top: 30px;
+}
+
+.form-field > label:active {
+  color: var(--color-text);
+}
+
+.input-box {
+  width: 100%;
+}
+
+.options-block {
+  display: flex;
+  flex-direction: row;
+  color: var(--color-text);
+}
+
+.signup-redirect {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  padding-left: 4px;
+  padding-right: 4px;
+  text-align: right;
+  width: 45%;
+}
+
+.signup-redirect:hover {
+  text-decoration: underline;
+}
+
+.forgot-password {
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  padding-left: 4px;
+  padding-right: 4px;
+  width: 45%;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.button {
+  display: flex;
+  justify-content: space-around;
+}
+
+.submit-button {
+  background-color: var(--submit-btn-bg);
+  padding: var(--submit-btn-padding);
+  border-radius: 5px;
+  border: none;
+  color: var(--color-text);
+  transition: all 0.2s ease-in-out;
+  width: 50%;
+  font-family: var(--font-aleo);
+}
+
+.submit-button:hover {
+  background-color: var(--submit-btn-hover);
+}
+
+.submit-button:active {
+  background-color: var(--submit-btn-active);
+}
+
+@media screen and (max-width: 575px) {
+  .content-container {
+    opacity: 1;
+    width: 70%;
+  }
+}
+
+@media screen and (max-height: 350px) {
+  .parent-container {
+    height: 110%;
+    padding: 10px 0px;
+  }
+}
